@@ -104,7 +104,7 @@ var ObjectPool = (function () {
     }, {
         key: 'releaseObject',
         value: function releaseObject(obj) {
-            if (obj instanceof this._ObjectClass) {
+            if (obj instanceof this._ObjectClass && this._pool.length > 0) {
                 obj.IDestroy();
                 this._pool.unshift(obj);
                 this._pointer++;

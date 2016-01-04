@@ -94,7 +94,7 @@
     }
 
     class IFlowWork {
-        constructor(name, config) {
+        constructor(name) {
             this._name = name;
         }
 
@@ -102,11 +102,15 @@
             return this._name;
         }
 
-        IFire
+        IInit(initfunc) {
+        }
+
+        IDo(dofunc) {
+        }
         /**
         * interface work completes, if wanted to be called, should be implemented.
         */
-        IComplete(data) {
+        IComplete(completefunc) {
         }
     }
 
